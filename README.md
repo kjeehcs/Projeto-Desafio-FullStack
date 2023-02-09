@@ -6,6 +6,6 @@
 * Página de Produtos;
 * Logout;
 
-# O meu foco com o projeto foi em cima do BackEnd já que algumas coisas não me lembrava ou não tinha conhecimento;
+- O meu foco com o projeto foi em cima do BackEnd já que algumas coisas não me lembrava ou não tinha conhecimento;
 
 
