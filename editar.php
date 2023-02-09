@@ -18,8 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     }
     $id = $_GET["id"];
 
-    include('assets/db/conexao.php');
-    $sql = "SELECT * FROM dados_usuarios";
+    $sql = "SELECT * FROM dados_usuarios WHERE id=$id";
     $result = $mysqli->query($sql);
     $row = $result->fetch_assoc();
 
@@ -38,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $endereco = $_POST["endereco"];
 
     do {
-        if (empty($nome) || empty($email) || empty($celular) || empty($endereco)) {
+        if (empty($id) || empty($nome) || empty($email) || empty($celular) || empty($endereco)) {
             $errorMessage = "Preencha todas as informações!";
             break;
         }
@@ -75,24 +74,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     <div class="container my-5">
         <h2>Editar Usuario</h2>
         <form method="POST">
+            <input type="hidden" name="id" value="<?php echo $id; ?>">
             <div class="row mb-3">
-                <label class="col-sm-3 col-form-label">Name</label>
+                <label class="col-sm-3 col-form-label">Nome</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="nome" value="">
+                    <input type="text" class="form-control" name="nome" value="<?php echo $nome; ?>">
                 </div>
             </div>
 
             <div class="row mb-3">
                 <label class="col-sm-3 col-form-label">E-mail</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="email" value="">
+                    <input type="text" class="form-control" name="email" value="<?php echo $email; ?>">
                 </div>
             </div>
 
             <div class="row mb-3">
                 <label class="col-sm-3 col-form-label">Celular</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="celular" value="">
+                    <input type="text" class="form-control" name="celular" value="<?php echo $celular; ?>">
                 </div>
             </div>
 
@@ -100,15 +100,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             <div class="row mb-3">
                 <label class="col-sm-3 col-form-label">Endereço</label>
                 <div class="col-sm-6">
-                    <input type="text" class="form-control" name="endereco" value="">
+                    <input type="text" class="form-control" name="endereco" value="<?php echo $endereco; ?>">
                 </div>
             </div>
             <div class="row mb-3">
                 <div class="offset-sm-3 col-sm-3 d-grid">
                     <button type="submit" class="btn btn-primary">Atualizar</button>
                 </div>
-                <div class="offset-sm-3 col-sm-3 d-grid">
-                    <a class="btn btn-outline-primary" href="/" role="button">Cancelar</a>
+                <div class="col-sm-3 d-grid">
+                    <a class="btn btn-outline-primary" href="listUsers.php" role="button">Cancelar</a>
                 </div>
             </div>
 

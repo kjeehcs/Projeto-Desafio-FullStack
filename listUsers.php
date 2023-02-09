@@ -12,7 +12,7 @@
 <body>
     <div class="container my-5">
         <h2>Lista de Usuários</h2>
-        <a class="btn btn-primary" href="/home.php" role="button">Novo</a>
+        <a class="btn btn-primary" href="index.php" role="button">Novo</a>
         <table class="table">
             <thead>
                 <tr>
@@ -20,8 +20,8 @@
                     <th>Nome</th>
                     <th>E-mail</th>
                     <th>Celular</th>
-                    <th>Criado as</th>
-                    <th>Ação</th>
+                    <th>Endereço</th>
+                    <th>Data da Criação</th>
                 </tr>
             </thead>
             <tbody>

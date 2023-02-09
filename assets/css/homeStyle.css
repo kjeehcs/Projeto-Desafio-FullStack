@@ -16,6 +16,11 @@
 body{
     color: var(--dark);
     background: var(--white);
+    margin:0;
+    padding-top: 60px;
+}
+.container{
+    position: absolute;
 }
 .navigation{
     display: flex;
@@ -150,3 +155,11 @@ body{
         gap: 5rem;
     }
 }
+  .header{
+    height: 60px;
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    position:fixed;
+    top:0
+  }

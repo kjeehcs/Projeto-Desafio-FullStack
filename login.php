@@ -30,7 +30,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
             $_SESSION['id'] = $usuario['id'];
             $_SESSION['nome'] = $usuario['nome'];
 
-            header("Location: home.php");
+            header("Location: listUsers.php");
         } else {
             echo "Falha ao logar! E-mail ou senha incorretos";
         }
@@ -71,7 +71,7 @@ if (isset($_POST['email']) || isset($_POST['senha'])) {
                     <input id="password" type="password" name="senha" placeholder="Digite sua senha">
                 </div>
                 <div class="login-button">
-                    <button type="submit">Entrar</button>
+                    <button type="submit"><a>Entrar</a></button>
                 </div><br>
                 <div class="login-button">
                     <button ><a href="index.php">Voltar</a></button>
