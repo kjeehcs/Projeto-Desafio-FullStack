@@ -1,5 +1,5 @@
 
-* O que faltou:   /Futuras melhorias
+# Futuras melhorias / O que faltou.
 * FrontEnd separado do BackEnd;
 * Criar rotas paras as telas, com chamadas HTTP;
 * Aproveitamento do JavaScript para as telas;
